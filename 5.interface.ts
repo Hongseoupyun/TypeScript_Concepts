@@ -1,5 +1,5 @@
 //1. Interface
-
+// interface is a new way to define a type in typescript
 let user: object;
 user = {
   name: "Eunice",
@@ -17,12 +17,18 @@ interface User2 {
   readonly birthYear?: number;
   [key: number]: Score;
 }
+//if you redefine the interface it will automatically extends the previous interface
+interface User2 {
+  height: number;
+}
 
+//hence, user2 should have height property
 let user2: User2 = {
   name: "Eunice",
   age: 27,
   1: "A",
   2: "B",
+  height: 170,
 };
 
 user2.name = "Yireh"; //correct
