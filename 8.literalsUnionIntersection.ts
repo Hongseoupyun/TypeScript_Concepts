@@ -48,12 +48,24 @@ function getGift(gift: vehicle | mobile) {
   }
 }
 
-
 // 3. Intersection Types; working as a "and"
 
-interface Automobie{
-  name:string;
-  start():void;
+interface Automobie {
+  name: string;
+  start(): void;
 }
 
+interface Toy2 {
+  name: string;
+  color: string;
+  price: number;
+}
 
+const toyCar2: Toy2 & Automobie = {
+  name: "toyCar",
+  start() {
+    console.log("start");
+  },
+  color: "red",
+  price: 1000,
+};
